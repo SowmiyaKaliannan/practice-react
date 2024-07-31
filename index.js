@@ -276,3 +276,67 @@ const App=()=>{
 const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<App/>)*/
 
+//Function arguments with props
+
+/*function Sample(props)
+{
+    return(
+        <div>
+            <h1>{props.name}</h1>
+            <h2>{props.age}</h2>
+        </div>
+    )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample name="sowmiya" age="20"/>)*/
+
+
+//Component in Component
+
+/*function Sample()
+{
+    return(
+        <h1>This is First Component</h1>
+    )
+}
+function Sample1()
+{
+    return(
+        <div>
+            This is Second Component
+            <Sample/>
+        </div>
+    )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample1/>)*/
+
+
+/*import Sample from "./App";
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+
+r1.render(<Sample/>)*/
+
+//Component Constructor
+
+/*class Sample extends React.Component {
+  constructor() {
+    super();
+    this.state = { name: "sowmiya", age: 20, Job: "Student", District: "Namakkal" };
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.name}</h1>
+        <h2>{this.state.age}</h2>
+        <h2>{this.state.Job}</h2>
+        <h2>{this.state.District}</h2>
+      </div>
+    );
+  }
+}
+const r1 = ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample />)*/
