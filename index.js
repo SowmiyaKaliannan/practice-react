@@ -452,3 +452,209 @@ r1.render(<Football/>)
 
 const r1 = ReactDOM.createRoot(document.getElementById("root"))
 r1.render(<Football />)*/
+
+
+          //conditional rendering
+
+/*function MissedGoal()
+{
+    return<h1>Missed</h1>
+}
+function MadeGoal()
+{
+    return<h1>GOAL</h1>
+}
+
+function Goal(props)
+{
+    const isGoal=props.isGoal;
+    if(isGoal)
+    {
+        return<MadeGoal/>
+    }
+    else
+    {
+        return<MissedGoal/>
+    }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Goal isGoal={Math.random()>0.5}/>)*/
+
+
+
+
+
+//React List
+
+/*function Car(props)
+{
+    return<li>I am {props.b1}</li>
+}
+function Garage()
+{
+    const cars=["Ford","BMW","Audi"]
+    return(
+        <ul>
+            {cars.map((c1)=>{
+                return <Car b1={c1}/>
+            })
+            }
+        </ul>
+    )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Garage/>)*/
+
+
+
+//React Keys
+/*function Car(props) {
+    return <li>I am a { props.brand }</li>;
+  }
+  
+  function Garage() {
+    const cars = [
+      {id: 1, brand: 'Ford'},
+      {id: 2, brand: 'BMW'},
+      {id: 3, brand: 'Audi'}
+    ];
+    return (
+      <>
+          <h1>Who lives in my garage?</h1>
+          <ul>
+          {cars.map((car) => <Car key={car.id} brand={car.brand} />)}
+        </ul>
+      </>
+    );
+  }
+  
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(<Garage />);*/
+
+
+
+
+//React getDerivedStateFromProps
+
+/*class Header extends React.Component
+{
+  
+  constructor(props)
+  {
+      super(props);
+      this.state={count:0};
+  }
+  static getDerivedStateFromProps(props,state)
+  {
+     return {count:props.c1}
+
+  }
+  render()
+  {
+      return <h1>Count: {this.state.count}</h1>;
+      }
+
+}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Header c1="100"/>);*/
+
+
+
+//ComponentDidMount
+
+/*class Header extends React.Component
+{
+   constructor(props)
+   {
+      super(props);
+      this.state={favcolor:"red"};
+   }
+   componentDidMount()
+   {
+      console.log("Component mounted");
+      setTimeout(()=>{
+          this.setState({favcolor:"blue"})
+      },10000)
+   }
+   render()
+   {
+      return(
+          <h1>This is Render Page{this.state.favcolor}</h1>
+      )
+   }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header/>)*/
+
+
+
+// setTimeout executes the code only once after the specified delay, 
+//  setInterval executes the code repeatedly at the specified interval.
+//ComponentWillUnmount clears the timer when the component is about to be
+// removed from the DOM to prevent memory leaks
+
+//Updating-getDerivedStateFromProps
+
+/* class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favcolor: "red" }
+  }
+  static getDerivedStateFromProps(props, state) {
+    console.log("getDerivedStateFromProps");
+    return { favcolor: props.favcolor };
+  }
+
+  changeColor = () => {
+
+    this.setState({ favcolor: "yellow" })
+  }
+  render() {
+    return (
+      <div>
+
+        <h1>This is Render Page{this.state.favcolor}</h1>
+        <button type="button" onClick={this.changeColor}>Change</button>
+
+      </div>
+    )
+  }
+}
+
+//    ReactDOM.render(<Header favcolor="green"/>,document.getElementById('root'));
+
+const r1 = ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header favcolor="green" />)*/
+
+
+
+
+//Should ComponentUpdate
+
+/*class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favcolor: "red" }
+  }
+  shouldComponentUpdate() {
+    return true;
+  }
+  changeColor = () => {
+    this.setState({ favcolor: "yellow" })
+  }
+  render() {
+    return (
+      <div>
+        <h1>This is render page{this.state.favcolor}</h1>
+        <button type="button" onClick={this.changeColor}>Change</button>
+      </div>
+    )
+
+  }
+}
+
+const r1 = ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header />)*/
