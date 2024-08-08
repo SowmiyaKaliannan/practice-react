@@ -591,45 +591,6 @@ r1.render(<Header/>)*/
 
 
 
-// setTimeout executes the code only once after the specified delay, 
-//  setInterval executes the code repeatedly at the specified interval.
-//ComponentWillUnmount clears the timer when the component is about to be
-// removed from the DOM to prevent memory leaks
-
-//Updating-getDerivedStateFromProps
-
-/* class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { favcolor: "red" }
-  }
-  static getDerivedStateFromProps(props, state) {
-    console.log("getDerivedStateFromProps");
-    return { favcolor: props.favcolor };
-  }
-
-  changeColor = () => {
-
-    this.setState({ favcolor: "yellow" })
-  }
-  render() {
-    return (
-      <div>
-
-        <h1>This is Render Page{this.state.favcolor}</h1>
-        <button type="button" onClick={this.changeColor}>Change</button>
-
-      </div>
-    )
-  }
-}
-
-//    ReactDOM.render(<Header favcolor="green"/>,document.getElementById('root'));
-
-const r1 = ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Header favcolor="green" />)*/
-
-
 
 
 //Should ComponentUpdate
