@@ -615,6 +615,50 @@ r1.render(<Header/>)*/
     )
 
   }
+
+
+
+
+//react hooks using usestate
+
+/*import { useState } from "react";
+
+function Counter() {
+  const [count, setcount] = useState(0);
+
+  return (
+    <div>
+      <h1>Count:{count}</h1>
+      <button type="button" onClick={() => setcount(count + 1)}>Increment</button>
+      <button type="button" onClick={() => setcount(count - 1)}>Decrement</button>
+    </div>
+  )
+}
+const r1 = ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter />)*/
+
+
+
+/*function Counter() {
+  const [count, setCount] = useState(0);
+  const [name, setName] = useState("Rahul");
+  const [password, setPassword] = useState("123")
+
+  return (
+    <div>
+      <h1>Count:{count}</h1>
+      <h1>Name:{name}</h1>
+      <h1>Password:{password}</h1>
+      <button type="button" onClick={() => setCount(count + 1)}>Increment</button>
+      <button type="button" onClick={() => setCount(count - 1)}>Decrement</button>
+      <button type="button" onClick={() => setName("Rahul Kumar")}>change name</button>
+      <button type="button" onClick={() => setPassword("1234")}>change Password</button>
+    </div>
+  )
+}
+const r1 = ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter />)*/
+
 }
 
 const r1 = ReactDOM.createRoot(document.getElementById('root'))
